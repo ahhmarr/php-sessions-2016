@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>future next registration form</title>
+</head>
+<body>
+	<h1>github.com/ahhmarr/phpSession2016</h1>
+	<h1>Future Next Student Registration Form</h1>
+	<form action="#" method="get">
+		<fieldset>
+			<legend>details</legend>
+			<!-- student id field -->
+		<div>
+			<label for="studentID">Student ID</label>
+			<input type="number" name="studentID" id="studentID">
+		</div>
+		<!-- date of registration -->
+		<div>
+			<label for="regDate">register Date</label>
+			<input type="date" name="regDate" id="regDate">
+		</div>
+		<!-- date of registration -->
+		<div>
+			<label for="program">program registered for</label>
+			<select type="text" name="program" id="program">
+				<option value="">[select]</option>
+				<option value="1">.NET</option>
+				<option value="3" selected>Android</option>
+			</select>
+		</div>
+		<div>
+			<label for="studentName">Name of the student</label>
+			<input type="text" required name="studentName" id="student">
+		</div>
+		
+		</fieldset>
+		<div>
+			<!-- for male -->
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="male" value="m">
+
+			<!-- for female -->
+			<label for="female">Female</label>
+			<input type="radio" name="gender" id="female" value="f" checked>
+		</div>
+		<!-- address field -->
+		<div>
+			<label for="address">Address</label>
+			<textarea id="address" rows="5" cols="15"></textarea>
+		</div>
+		<div>
+			<input type="submit">
+			<input type="reset">
+		</div>
+	</form>
+</body>
+</html>
