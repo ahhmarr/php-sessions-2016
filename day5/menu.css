@@ -1,0 +1,26 @@
+ul{
+	list-style-type: none;
+
+}
+ul li {
+	/*background-color: green;*/
+	float: left;
+	padding:5px;
+	background-color: #C5C5C5;
+	margin-left:10px;
+	width:100px;
+	text-align: center;
+	text-transform: capitalize;
+
+}
+ul li:hover{
+	color: #fff;
+	background-color: #34E2FF;
+	cursor:pointer;
+}
+div{
+	float: left;
+}
+.clearfix{
+	clear: both;
+}
