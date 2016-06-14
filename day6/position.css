@@ -1,0 +1,20 @@
+img{
+	height:100px;
+}
+#second-section{
+	background-color: yellow;
+	height: 100px;
+	width:100px;
+	position: relative;
+	top:15px;
+	left:35px;
+	z-index: -2;
+}
+#first-section{
+	display: none;
+}
+#im{
+	position: fixed;
+	top:10px;
+	z-index: -1;
+}

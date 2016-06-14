@@ -1,0 +1,30 @@
+@keyframes anim{
+	/* from {
+		background-color: red;
+	}
+	to {
+		background-color: yellow;
+	} */
+	0%{
+		height: 210px;
+		width: 210px;
+	}
+	50%{
+		height: 240px;
+		width: 240px;
+	}
+	100%{
+		height: 300px;
+		width: 300px;
+	}
+}
+div{
+	background-color: purple;
+	animation: anim;
+	animation-direction: alternate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	height:200px;
+	width:200px;
+	animation-timing-function: ease-in-out;
+}
