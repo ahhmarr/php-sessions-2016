@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript example</title>
+</head>
+<body>
+	<div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	<input type="button" value="click me !!" onClick="override()">
+
+	<script type="text/javascript">
+		function override()
+		{
+			var d=document.querySelector('#content');
+			d.innerHTML='changed the text dynamically';
+			// alert(d);
+		}
+		function newFunction(x)
+		{
+			if(x%2==0){
+				alert(x+'number is even');
+			}else{
+				alert(x+'number is odd');
+			}
+		}
+		/*newFunction(110);
+		newFunction(115);
+		newFunction(220);*/
+	</script>
+	<script type="text/javascript" src="example.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
