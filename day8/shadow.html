@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box shadow creator</title>
+	<style type="text/css">
+		#dummy-div{
+			height: 200px;
+			width:200px;
+			margin:10% 40% 0 40%;
+			background-color: #B7DFDF;
+		}
+		#rule{
+			font-size: 30px;
+			padding:10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<area id="rule"></area>
+	<div id="dummy-div">dummy area</div>
+	<script type="text/javascript" src="shadow.js"></script>
+	<!-- x inset starts -->
+	<section>
+		<label for="x">X-Inset</label>
+		<input onchange="generate()" value="0" type="number" id="x">
+	</section>
+
+	<!-- y inset starts -->
+	<section>
+		<label for="y">y-Inset</label>
+		<input onchange="generate()" value="0" type="number" id="y">
+	</section>
+	<!-- blur radius starts -->
+	<section>
+		<label for="blur">blur radius</label>
+		<input onchange="generate()" value="0" type="number" id="blur">
+	</section>
+	<!-- color starts -->
+	<section>
+		<label for="color">color-Inset</label>
+		<input onchange="generate()"  type="color" id="color">
+	</section>
+	<section>
+		<button onclick="generate()">
+			Generate
+		</button>
+	</section>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
