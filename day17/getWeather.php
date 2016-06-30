@@ -9,7 +9,7 @@
 		<form>
 			<div>
 				<label>city name</label>
-				<input type="text" name="city">
+				<input type="text" name="city" value="venice">
 			</div>
 			<div>
 				<input type="button" value="fetch weather" onclick="fetchWeather()">
@@ -17,8 +17,8 @@
 		</form>
 	</div>
 	<div id="dynamic"></div>
-	<div id="maps"></div>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCtDgyZNiCFBOSwVtIyfkqYJ_TUH0e1dQs"></script>
+	<div id="maps" style="height: 400px"></div>
+	<script type="text/javascript" src="../includes/map.js"></script>
 	<script type="text/javascript">
 		function fetchWeather()
 		{
@@ -42,7 +42,7 @@
 					var minTemprature=json.main.temp_min;
 					var maxTemprature=json.main.temp_max;
 					var msg='Current Temp '+currentTemprature+ ' min :'+minTemprature + 'max :'+maxTemprature;
-					// displayMap(json.coord.lat,json.coord.lon);
+					displayMap(json.coord.lat,json.coord.lon);
 					document.querySelector("#dynamic").innerHTML=msg;
 				}else{
 					document.querySelector("#dynamic").innerHTML='<img src="../includes/image/hourglass.svg" />';
@@ -52,10 +52,11 @@
 		function displayMap(lat,long)
 		{
 			console.log('called the google functions');
-			var param={
-				center : google.maps.LatLng(lat,long)
-			};
-			google.maps.Map(document.querySelector("#maps"),param);
+			var mapProp = {
+		    center:new google.maps.LatLng(lat,long),
+		    zoom:13
+		  };
+		  var map=new google.maps.Map(document.querySelector("#maps"),mapProp);
 		}
 	</script>
 </body>
