@@ -18,7 +18,7 @@
 	</div>
 	<div id="dynamic"></div>
 	<div id="maps"></div>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?api=AIzaSyCtDgyZNiCFBOSwVtIyfkqYJ_TUH0e1dQs"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCtDgyZNiCFBOSwVtIyfkqYJ_TUH0e1dQs"></script>
 	<script type="text/javascript">
 		function fetchWeather()
 		{
