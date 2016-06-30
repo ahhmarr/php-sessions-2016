@@ -17,11 +17,12 @@
 		</form>
 	</div>
 	<div id="dynamic"></div>
-	<div id="maps" style="height: 400px"></div>
+	<div id="maps" style="height: 400px;width:700px"></div>
 	<script type="text/javascript" src="../includes/map.js"></script>
 	<script type="text/javascript">
 		function fetchWeather()
 		{
+			document.querySelector("#maps").innerHTML='<img src="../includes/image/hourglass.svg" />';
 			var ajx=new XMLHttpRequest();
 			var cityName=document.querySelector('input[name=city]').value;
 			var url='http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=b74f29d201de1c25b206456c3a38f83e&units=metric'
@@ -45,7 +46,7 @@
 					displayMap(json.coord.lat,json.coord.lon);
 					document.querySelector("#dynamic").innerHTML=msg;
 				}else{
-					document.querySelector("#dynamic").innerHTML='<img src="../includes/image/hourglass.svg" />';
+					
 				}
 			};
 		}
