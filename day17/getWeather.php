@@ -22,7 +22,7 @@
 	<script type="text/javascript">
 		function fetchWeather()
 		{
-			document.querySelector("#maps").innerHTML='<img src="../includes/image/hourglass.svg" />';
+			
 			var ajx=new XMLHttpRequest();
 			var cityName=document.querySelector('input[name=city]').value;
 			var url='http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=b74f29d201de1c25b206456c3a38f83e&units=metric'
@@ -34,11 +34,12 @@
 				if(ajx.readyState==4 && ajx.status==200){
 					var resp=ajx.responseText;
 					var json=JSON.parse(resp);
-					if(!json){
+					if(!json.main){
 						var msg='undefined paramter';
 						document.querySelector("#dynamic").innerHTML=msg;
 						return;
 					}
+					document.querySelector("#maps").innerHTML='<img src="../includes/image/hourglass.svg" />';
 					var currentTemprature=json.main.temp;
 					var minTemprature=json.main.temp_min;
 					var maxTemprature=json.main.temp_max;
