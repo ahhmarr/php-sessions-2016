@@ -42,7 +42,7 @@
 					var minTemprature=json.main.temp_min;
 					var maxTemprature=json.main.temp_max;
 					var msg='Current Temp '+currentTemprature+ ' min :'+minTemprature + 'max :'+maxTemprature;
-					displayMap(json.coord.lat,json.coord.lon);
+					// displayMap(json.coord.lat,json.coord.lon);
 					document.querySelector("#dynamic").innerHTML=msg;
 				}else{
 					document.querySelector("#dynamic").innerHTML='<img src="../includes/image/hourglass.svg" />';
